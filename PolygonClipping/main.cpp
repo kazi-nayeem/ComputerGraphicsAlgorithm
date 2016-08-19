@@ -1,16 +1,16 @@
 #include <GL/glut.h>
 #include <bits/stdc++.h>
 using namespace std;
+#define SIZE 250
 
-#define LOWX -250
-#define HIGHX 250
-#define LOWY -250
-#define HIGHY 250
+#define LOWX -SIZE
+#define HIGHX SIZE
+#define LOWY -SIZE
+#define HIGHY SIZE
 
-#define WIDTH 500
-#define HEIGHT 500
+#define WIDTH (2*SIZE)
+#define HEIGHT (2*SIZE)
 
-#define SCALE ((double)WIDTH / (HIGHX - LOWX))
 
 struct PNT
 {
@@ -144,7 +144,7 @@ void BUILDER()
     // output description
     puts("\n\nOutput Description:");
     puts("Line inside are in BLUE");
-    puts("Line outside are in RED");
+    //puts("Line outside are in RED");
     puts("Window are in BLACK box");
 }
 

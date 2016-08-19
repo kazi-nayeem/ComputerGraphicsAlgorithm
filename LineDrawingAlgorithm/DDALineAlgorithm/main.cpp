@@ -2,9 +2,25 @@
 #include <stdlib.h>
 #include <cstdio>
 
+#define SIZE 250
+
 typedef GLint point2[2];
 
 int x1, x2, y1, y2;
+
+void setAxis()
+{
+    glColor3f(0.8, 0.8, 0.8);
+    glBegin(GL_LINES);
+    glVertex2i(SIZE,0);
+    glVertex2i(-SIZE,0);
+    glEnd();
+
+    glBegin(GL_LINES);
+    glVertex2i(0,SIZE);
+    glVertex2i(0,-SIZE);
+    glEnd();
+}
 
 void myinit(void)
 {
@@ -12,7 +28,7 @@ void myinit(void)
     glColor3f(1.0, 0.0, 0.0);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluOrtho2D(-250.0, 250.0, -250.0, 250.0);
+    gluOrtho2D(-SIZE, SIZE, -SIZE, SIZE);
     glMatrixMode(GL_MODELVIEW);
 }
 
@@ -26,6 +42,9 @@ void drawPoint(int x, int y)
 void display(void)
 {
     glClear(GL_COLOR_BUFFER_BIT);
+    setAxis();
+    glColor3f(1.0, 0.0, 0.0);
+
     if(x1 == x2)
     {
         if(y1>y2)
@@ -122,7 +141,7 @@ int main(int argc, char **argv)
     glutInit(&argc, argv);
 
     glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
-    glutInitWindowSize (500, 500);
+    glutInitWindowSize (2*SIZE, 2*SIZE);
     glutInitWindowPosition (200, 150);
     glutCreateWindow ("DDA Line Drawing Algorithm");
     glutDisplayFunc (display);

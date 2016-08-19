@@ -235,3 +235,9 @@
 	<cstdio>
 	<cmath>
 
+1471156570 source:c:\users\kazi nayeem\dropbox\course\3-2\computer graphics and image processing\final\assignment2\circledrawingalgorithm\midpointcircledrawingalgorithm\main.cpp
+	<GL/glut.h>
+	<stdlib.h>
+	<cstdio>
+	<cmath>
+

@@ -3,10 +3,12 @@
 #include <cstdio>
 #include <cmath>
 
-const int Xhigh = 250;
-const int Yhigh = 250;
-const int Xlow = -250;
-const int Ylow = -250;
+#define SIZE 250
+
+const int Xhigh = SIZE;
+const int Yhigh = SIZE;
+const int Xlow = -SIZE;
+const int Ylow = -SIZE;
 
 int r, x, y;
 
@@ -200,7 +202,7 @@ void inputProcess()
     instance = getTranslate(P)*instance;
     //instance.print();
     trans = input;
-    instance.print();
+    //instance.print();
     trans.Transform(instance);
 }
 
@@ -210,7 +212,7 @@ int main(int argc, char **argv)
     glutInit(&argc, argv);
 
     glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
-    glutInitWindowSize (500, 500);
+    glutInitWindowSize (2*SIZE, 2*SIZE);
     glutInitWindowPosition (200, 150);
     glutCreateWindow ("Rotate a Triangle about an Arbitrary Point");
     glutDisplayFunc (display);

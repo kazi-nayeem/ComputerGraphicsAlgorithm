@@ -235,3 +235,9 @@
 	<cstdio>
 	<cmath>
 
+1471183798 source:c:\users\kazi nayeem\dropbox\course\3-2\computer graphics and image processing\final\assignment4\rotate a triangle about an arbitrary point\main.cpp
+	<GL/glut.h>
+	<stdlib.h>
+	<cstdio>
+	<cmath>
+

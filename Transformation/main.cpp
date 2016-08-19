@@ -3,10 +3,12 @@
 #include <cstdio>
 #include <cmath>
 
-const int Xhigh = 250;
-const int Yhigh = 250;
-const int Xlow = -250;
-const int Ylow = -250;
+#define SIZE 250
+
+const int Xhigh = SIZE;
+const int Yhigh = SIZE;
+const int Xlow = -SIZE;
+const int Ylow = -SIZE;
 
 int r, x, y;
 
@@ -267,14 +269,14 @@ void inputProcess()
             scanf("%lf %lf", &sx, &sy);
             instance = getSearing(sx,sy)*instance;
         }
-        instance.print();
+        //instance.print();
         puts("\n\n");
     }
     puts("Green is Original");
     puts("Red is Transformed");
 
     trans = input;
-    instance.print();
+    //instance.print();
     trans.Transform(instance);
 }
 
@@ -284,7 +286,7 @@ int main(int argc, char **argv)
     glutInit(&argc, argv);
 
     glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
-    glutInitWindowSize (500, 500);
+    glutInitWindowSize (2*SIZE, 2*SIZE);
     glutInitWindowPosition (200, 150);
     glutCreateWindow ("Transformation");
     glutDisplayFunc (display);

@@ -2,13 +2,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define LOWX -250
-#define HIGHX 250
-#define LOWY -250
-#define HIGHY 250
+#define SIZE 100
 
-#define WIDTH 500
-#define HEIGHT 500
+#define LOWX -SIZE
+#define HIGHX SIZE
+#define LOWY -SIZE
+#define HIGHY SIZE
+
+#define WIDTH (2*SIZE)
+#define HEIGHT (2*SIZE)
 
 #define SCALE ((double)WIDTH / (HIGHX - LOWX))
 
